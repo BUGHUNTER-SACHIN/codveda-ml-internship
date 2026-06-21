@@ -1,0 +1,34 @@
+# Task 4: Decision Trees for Classification
+
+## Objective
+Build a decision tree classifier to predict a categorical outcome
+(species of flowers).
+
+## Dataset
+Iris dataset (150 samples, 4 features, 3 species) — built into scikit-learn
+
+## Steps Performed
+- Trained an initial unpruned decision tree (max depth = 5)
+- Visualized the full tree structure
+- Pruned the tree by testing max_depth values from 1 to 5
+- Selected the best-performing depth based on test accuracy and F1-score
+- Evaluated final model using classification report and confusion matrix
+
+## Results
+- Unpruned tree (depth=5): 93.3% accuracy
+- Pruned tree (depth=3): 96.7% accuracy, 0.967 weighted F1-score
+
+## Key Insight
+The pruned tree (max_depth=3) outperformed the unpruned tree, confirming
+that the extra depth in the full tree was overfitting rather than adding
+real predictive value. Setosa is perfectly separable from the other two
+species. The only misclassification occurs between versicolor and
+virginica, a well-documented hard case for this dataset due to overlapping
+petal measurements.
+
+## Tools Used
+Python, pandas, scikit-learn, matplotlib, NumPy
+
+## Files
+- `Codveda_Task4_Decision_Trees.ipynb` — full notebook with code, tree
+  visualizations, and evaluation metrics
